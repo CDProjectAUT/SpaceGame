@@ -12,13 +12,16 @@ public class PlayerMovement : MonoBehaviour {
     public float tilt;
     public float xMin, xMax, zMin, zMax;
     Rigidbody rb;
-   
 
     void Start()
     {
       
         rb = GetComponent<Rigidbody>();
     }
+
+
+
+   
 
     void FixedUpdate()
     {
