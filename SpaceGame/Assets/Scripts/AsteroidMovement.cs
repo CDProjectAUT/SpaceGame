@@ -5,13 +5,15 @@ using UnityEngine;
 public class AsteroidMovement : MonoBehaviour
 {
     public float speed = 1f;
+    public float tumble;
     Rigidbody rigidbodyAsteroid;
     Vector3 movement;
 
-    void Awake()
+    void Start()
     {
         rigidbodyAsteroid = GetComponent<Rigidbody>();
-        
+        rigidbodyAsteroid.angularVelocity = Random.insideUnitSphere * tumble;
+
     }
 
     // Update is called once per frame
